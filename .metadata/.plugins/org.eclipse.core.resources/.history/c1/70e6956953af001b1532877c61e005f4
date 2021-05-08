@@ -1,0 +1,12 @@
+package eCommerce.business.abstracts;
+
+import eCommerce.entities.concretes.Customer;
+
+public interface CustomerCheckService {
+	boolean keyCheck(Customer customer);
+	boolean isValidEmail(Customer customer);
+	boolean IsEmailUsed(Customer customer);
+	boolean isRealName(Customer customer) ;
+	boolean isRealLastName(Customer customer);
+
+}

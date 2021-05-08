@@ -1,0 +1,5 @@
+package eCommerce.business.concretes;
+
+public class CustomerCheckServis {
+
+}

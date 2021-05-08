@@ -1,0 +1,8 @@
+package eCommerce.core;
+
+public class Gmaillog {
+	void sendMail() {
+	 System.out.println("gmail ile kayýt oldu.");
+	}
+
+}

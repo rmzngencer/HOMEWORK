@@ -1,0 +1,101 @@
+package eCommerce.entities.concretes;
+
+import java.util.regex.Pattern;
+
+import eCommerce.entities.abstracts.Entity;
+
+public class Customer implements Entity {
+	
+	private int id;
+	private String name;
+	private String lastName;
+	private String eMail;
+	private String key;
+	
+	
+	
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public Customer(int id, String name, String lastName, String eMail, String key) {
+		super();
+		this.setId(id);
+        this.setName(name);
+        this.setLastName(lastName);
+        this.seteMail(lastName);
+        this.setKey(key);
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+
+	public String geteMail() {
+		return eMail;
+	}
+
+
+
+	public void seteMail(String eMail) {
+        	this.eMail = eMail;
+	}
+
+
+
+	public String getKey() {
+			return key;
+	}
+
+
+
+	public void setKey(String key) {
+		if(key.length()<=6) {
+			this.key = key;
+		}else {
+			System.out.print("hatalý þifre"); 
+		}
+		
+	}
+	
+	
+	
+
+}

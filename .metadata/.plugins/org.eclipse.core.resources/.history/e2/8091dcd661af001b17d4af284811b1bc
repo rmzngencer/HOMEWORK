@@ -1,0 +1,12 @@
+package eCommerce.business.abstracts;
+
+import eCommerce.entities.concretes.Customer;
+
+public interface logInService {
+	void login(Customer customer);
+
+	void login(String email, String password);
+
+
+
+}

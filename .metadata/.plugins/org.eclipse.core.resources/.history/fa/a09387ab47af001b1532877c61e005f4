@@ -1,0 +1,17 @@
+package eCommerce;
+
+import eCommerce.business.concretes.CustomerManager;
+import eCommerce.entities.concretes.Customer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		customer.setName("l");
+		customer.getName();
+		CustomerManager customerManager = new CustomerManager();
+		customerManager.add(customer);
+
+	}
+
+}

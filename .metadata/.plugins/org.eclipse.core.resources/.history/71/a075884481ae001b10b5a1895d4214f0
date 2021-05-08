@@ -1,0 +1,6 @@
+package eCommerce.entities.abstracts;
+package eCommerce.entities.abstract;
+
+public class Entitiy {
+
+}

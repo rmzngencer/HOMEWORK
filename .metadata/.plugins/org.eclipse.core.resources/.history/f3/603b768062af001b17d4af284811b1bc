@@ -1,0 +1,15 @@
+package eCommerce.core;
+
+public class LogEmail {
+	
+	void sendMail() {
+		 System.out.println("Doðrulama maili yollandý.");
+
+	}
+	
+	 public boolean isClickMail() {
+		System.out.println("Doðrulama maili onaylandý.");
+		return true;
+		
+	}
+}

@@ -1,0 +1,15 @@
+package eCommerce.dataAccess.abstracts;
+
+import java.util.List;
+
+import eCommerce.entities.concretes.Customer;
+
+public interface ProductDao {
+	void add(Customer customer);
+	void update(Customer customer);
+	void delete(Customer customer);
+	void logIn(String mail);
+	Customer get(int eMail);
+	List<Customer> getAll();
+
+}

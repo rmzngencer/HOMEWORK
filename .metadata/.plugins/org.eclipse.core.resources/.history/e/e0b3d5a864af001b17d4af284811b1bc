@@ -1,0 +1,31 @@
+package eCommerce;
+
+import java.util.List;
+
+import eCommerce.business.concretes.CustomerManager;
+import eCommerce.business.concretes.LogInkManager;
+import eCommerce.core.LogEmail;
+import eCommerce.dataAccess.abstracts.ProductDao;
+import eCommerce.dataAccess.concretes.DataProductDao;
+import eCommerce.entities.concretes.Customer;
+import eCommerce.singUp.abstracts.SingInService;
+import eCommerce.singUp.concretes.GmailSingIn;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Customer customer1 = new Customer();
+		customer1.setId(202);
+		customer1.setName("sasdaet");
+		customer1.setLastName("Ayd");
+		customer1.setKey("355527");
+		customer1.seteMail("gncrgs@gmail.com");
+		System.out.print(customer1.getName());
+		CustomerManager customerManager = new CustomerManager(new DataProductDao(new LogEmail()), new GmailSingIn());
+		customerManager.add(customer1);
+
+		LogInkManager inkManager = new LogInkManager(new DataProductDao(null));
+		inkManager.login("gcrgsgmail.com","3527");
+	}
+
+}

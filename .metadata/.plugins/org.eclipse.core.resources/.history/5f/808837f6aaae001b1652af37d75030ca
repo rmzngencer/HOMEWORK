@@ -1,0 +1,10 @@
+package eCommerce.business.abstracts;
+
+public interface CustomerService {
+	
+	void add();
+	void delete();
+	void update();
+	void singIn();
+
+}

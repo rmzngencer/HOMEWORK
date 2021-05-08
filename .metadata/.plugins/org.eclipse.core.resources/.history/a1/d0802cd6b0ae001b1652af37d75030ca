@@ -1,0 +1,103 @@
+package eCommerce.entities.concretes;
+import java.util.Scanner;
+
+import eCommerce.business.concretes.CustomerCheckManager;
+import eCommerce.entities.abstracts.Entity;
+
+public class Customer implements Entity {
+	
+	private int id;
+	private String name;
+	private String lastName;
+	private String eMail;
+	private String key;
+	
+	CustomerCheckManager customerCheckManager;
+	
+	public Customer() {
+	}
+
+
+	
+	public Customer(int id, String name, String lastName, String eMail, String key) {
+		super();
+		this.setId(id, customerCheckManager);
+        this.setName(name);
+        this.setLastName(lastName);
+        this.seteMail(lastName);
+        this.setKey(key);
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id, CustomerCheckManager customerCheckManager) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+	Scanner input = new Scanner(System.in);
+	
+
+	public void setName(String name) {
+		if ( this.name == null ||this.name.length() < 6) {
+			System.out.println("Wrong name format. Please try again!!!");
+	        System.out.print("Please enter your name: ");
+	        this.name = input.nextLine();
+		}else {
+			this.name = name;
+		}
+            
+            
+	}
+
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+
+	public String geteMail() {
+		return eMail;
+	}
+
+
+
+	public void seteMail(String eMail) {
+        	this.eMail = eMail;
+	}
+
+
+
+	public String getKey() {
+			return key;
+	}
+
+
+
+	public void setKey(String key) {
+		this.key = key;
+		
+	}
+	
+	
+	
+
+}

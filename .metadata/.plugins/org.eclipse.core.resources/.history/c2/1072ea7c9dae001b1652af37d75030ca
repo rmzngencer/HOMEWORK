@@ -1,0 +1,31 @@
+package eCommerce.dataAccess.concretes;
+
+import eCommerce.dataAccess.abstracts.CustomerService;
+
+public class CustomerManager implements CustomerService {
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void singIn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

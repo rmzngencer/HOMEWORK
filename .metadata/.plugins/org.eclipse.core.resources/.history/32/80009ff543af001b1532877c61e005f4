@@ -1,0 +1,13 @@
+package eCommerce.core;
+
+public class LogEmail {
+	
+	void sendMail() {
+		
+	}
+	
+	Boolean isClickMail() {
+		return true;
+		
+	}
+}

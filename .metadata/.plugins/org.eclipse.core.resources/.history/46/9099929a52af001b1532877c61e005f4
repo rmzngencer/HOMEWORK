@@ -1,0 +1,5 @@
+package eCommerce.singUp.abstracts;
+
+public interface SingInService {
+
+}

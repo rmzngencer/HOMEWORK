@@ -1,0 +1,21 @@
+package eCommerce;
+
+import java.util.List;
+
+import eCommerce.business.concretes.CustomerManager;
+import eCommerce.dataAccess.abstracts.ProductDao;
+import eCommerce.dataAccess.concretes.DataProductDao;
+import eCommerce.entities.concretes.Customer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		customer.setName("ahmet");
+	
+		CustomerManager customerManager = new CustomerManager(new DataProductDao());
+		customerManager.add();
+
+	}
+
+}

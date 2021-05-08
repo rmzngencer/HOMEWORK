@@ -1,0 +1,57 @@
+package eCommerce.business.concretes;
+
+import java.util.List;
+
+import eCommerce.business.abstracts.CustomerService;
+import eCommerce.dataAccess.abstracts.ProductDao;
+import eCommerce.entities.concretes.Customer;
+
+public class CustomerManager implements CustomerService {
+	
+	private ProductDao productDao;
+	private LoggerService loggerService;
+
+	
+	public CustomerManager(ProductDao productDao, LoggerService loggerService) {
+			super();
+			this.productDao = productDao;
+			this.loggerService=loggerService;
+		}
+
+	@Override
+	public void add(Customer customer) {
+		this.productDao.add(customer);
+		this.loggerService.logTosystem("�r�n eklendi. "+ customer.getName());
+		
+		private static List<Customer> customers = null;
+		
+		
+			for (Customer oldUser : customers) {
+				if (oldUser.geteMail() == customer.geteMail()) {
+						return "this e mail used";
+					}
+			}
+			
+					
+		}
+	
+
+	@Override
+	public void delete(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void singIn(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

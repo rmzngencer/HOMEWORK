@@ -1,0 +1,35 @@
+package eCommerce.business.concretes;
+
+import eCommerce.business.abstracts.CustomerService;
+import eCommerce.entities.concretes.Customer;
+
+public class CustomerManager implements CustomerService {
+	
+	CustomerCheckManager customerCheckManager;
+
+	@Override
+	public void add(Customer customer) {
+		
+		customerCheckManager.isRealLastName(customer);
+		System.out.println("eklendi");
+	}
+
+	@Override
+	public void delete(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void singIn(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

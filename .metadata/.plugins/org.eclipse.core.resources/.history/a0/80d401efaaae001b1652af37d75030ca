@@ -1,0 +1,74 @@
+package eCommerce.business.concretes;
+
+import java.util.List;
+import java.util.regex.Pattern;
+
+import eCommerce.business.abstracts.CustomerCheckService;
+import eCommerce.entities.concretes.Customer;
+
+public class CustomerCheckManager implements CustomerCheckService {
+
+	@Override
+	public boolean keyCheck(Customer customer) {
+		 if (customer.getName() == null || customer.getName().length() < 6) {
+	            return false;
+	            }
+		 return true;
+		 
+		
+	}
+
+	@Override
+	public boolean isValidEmail(Customer customer) {
+		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (customer.geteMail() == null)
+            return false;
+        return pat.matcher(customer.geteMail()).matches();
+	}
+
+	private static List<Customer> customers = null;
+	@Override
+	public boolean IsEmailUsed(Customer customer) {
+		for (Customer oldUser : customers) {
+			if (oldUser.geteMail() == customer.geteMail()) {
+					return false;
+				}
+				
+			}
+		return true;
+				
+	}
+
+	@Override
+	public boolean isRealName(Customer customer) {
+		 if (customer.getName() == null || customer.getName().length() < 2) {
+	            return false;
+	        }
+	        for (char c : customer.getName().toCharArray()) {
+	            if (Character.isDigit(c)) {
+	                return false;
+	            }
+	        }
+	        return true;
+	}
+
+	@Override
+	public boolean isRealLastName(Customer customer) {
+		 if (customer.getLastName() == null || customer.getLastName().length() < 2) {
+	            return false;
+	        }
+	        for (char c : customer.getLastName().toCharArray()) {
+	            if (Character.isDigit(c)) {
+	                return false;
+	            }
+	        }
+	        return true;
+		
+	}
+	
+}

@@ -1,0 +1,44 @@
+package eCommerce.business.concretes;
+
+import java.util.List;
+
+import eCommerce.business.abstracts.CustomerService;
+import eCommerce.dataAccess.abstracts.ProductDao;
+import eCommerce.entities.concretes.Customer;
+
+public class CustomerManager implements CustomerService {
+	
+	ProductDao productDao;
+	public CustomerManager(ProductDao productDao) {
+			super();
+			
+		}
+
+	@Override
+	@Override
+	public void add() {
+		
+	productDao.add(customer);	
+					
+		}
+	
+
+	@Override
+	public void delete(Customer customer) {
+		
+		
+	}
+
+	@Override
+	public void update(Customer customer) {
+		
+		
+	}
+
+	@Override
+	public void singIn(Customer customer) {
+		
+		
+	}
+
+}

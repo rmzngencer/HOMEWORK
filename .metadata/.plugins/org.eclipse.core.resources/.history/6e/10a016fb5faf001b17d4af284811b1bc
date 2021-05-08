@@ -1,0 +1,30 @@
+package eCommerce.business.concretes;
+
+import java.util.List;
+import java.util.regex.Pattern;
+
+
+import eCommerce.business.abstracts.logInService;
+import eCommerce.dataAccess.abstracts.ProductDao;
+import eCommerce.entities.concretes.Customer;
+import eCommerce.singUp.abstracts.SingInService;
+
+public class LogInkManager implements logInService {
+	
+	private ProductDao productDao;
+	
+	public LogInkManager(ProductDao productDao) {
+		this.productDao=productDao;
+		
+		}
+
+	@Override
+	public void login(Customer customer) {
+		productDao.logIn(null,null);
+		
+		
+	}
+
+	
+	
+}
