@@ -11,10 +11,12 @@ public class DataProductDao implements ProductDao {
 
     LogEmail logEmail;
 
+
     List<Customer> customers = new ArrayList<>();
 
     public DataProductDao(LogEmail logEmail) {
         this.logEmail = logEmail;
+
 
     }
 
@@ -30,11 +32,12 @@ public class DataProductDao implements ProductDao {
 
     @Override
     public void add(Customer customer) {
+        logEmail.sendMail(customer);
         while (!emailCheck(customer)) {
             System.out.println("E mail mevcut!!!");
         }
         while (!logEmail.isClickMail(customer)) {
-            System.out.println("E mail onaylanmadý");
+            System.out.println("E mail onaylanmadı");
         }
 
         System.out.println("sisteme eklendi " + customer.getName());
@@ -77,11 +80,11 @@ public class DataProductDao implements ProductDao {
     @Override
     public void logIn(String email, String password) {
         if (loginByCheck(email, password) == true) {
-            System.out.println("kullanýcý bilgileri doðru!!! sisteme giriþ yapýldý");
+            System.out.println("kullanıcı bilgileri doğru, sisteme giriş yapıldı");
 
         } else {
 
-            System.out.println("kullanýcý bilgileri hatalý!! sisteme giriþ yapýlmadý");
+            System.out.println("kullanıcı bilgileri hatalı, sisteme giriş yapılamadı");
         }
 
     }

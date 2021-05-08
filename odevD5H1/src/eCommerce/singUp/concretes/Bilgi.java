@@ -3,13 +3,9 @@ package eCommerce.singUp.concretes;
 import eCommerce.entities.concretes.Customer;
 import eCommerce.singUp.abstracts.SingInService;
 
-public class GmailSingIn implements SingInService {
-
-    @Override
+public class Bilgi implements SingInService {
     public void add(Customer customer) {
-        System.out.println("gmail ile kayıt yapıldı");
+        System.out.println("bilgiler ile ile kayıt yapıldı");
 
     }
-
-
 }

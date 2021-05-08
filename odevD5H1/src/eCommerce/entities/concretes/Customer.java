@@ -46,8 +46,8 @@ public class Customer implements Entity {
 
     public void setName(String name) {
         while ((name == null || name.length() < 3)) {
-            System.out.println("Eksik veya hatalý giriþ!!!");
-            System.out.print("Adýnýzý yazýnýz: ");
+            System.out.println("Eksik veya hatalı giriş!!!");
+            System.out.print("adınızı giriniz: ");
             name = input.nextLine();
         }
 
@@ -61,8 +61,8 @@ public class Customer implements Entity {
 
     public void setLastName(String lastName) {
         while ((lastName == null || lastName.length() < 3)) {
-            System.out.println("Eksik veya hatalý giriþ!!!");
-            System.out.print("Soyadýnýzý yazýnýz: ");
+            System.out.println("Eksik veya hatalı giriş!!!");
+            System.out.print("soyadınızı giriniz: ");
             lastName = input.nextLine();
         }
         this.lastName = lastName;
@@ -83,7 +83,7 @@ public class Customer implements Entity {
 
         while (pat.matcher(eMail).matches()) {
 
-            System.out.println("Eksik veya hatalý giriþ!!!");
+            System.out.println("Eksik veya hatalı giriş!!!");
             System.out.print("e mail giriniz: ");
             eMail = input.nextLine();
         }
@@ -97,8 +97,8 @@ public class Customer implements Entity {
 
     public void setKey(String key) {
         while (key == null || key.length() < 6) {
-            System.out.println("Eksik veya hatalý giriþ!!!");
-            System.out.print(" enter your name: ");
+            System.out.println("Eksik veya hatalı giriş!!!");
+            System.out.print("şifreniz en az 6 karakterli olmalı: ");
             key = input.nextLine();
         }
         this.key = key;
